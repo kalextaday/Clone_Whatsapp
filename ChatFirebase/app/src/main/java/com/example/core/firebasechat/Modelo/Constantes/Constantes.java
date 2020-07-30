@@ -1,8 +1,5 @@
 package com.example.core.firebasechat.Modelo.Constantes;
 
-/**
- * Created by user on 30/08/2018. 30
- */
 public class Constantes {
     public static final String urlFotoPorDefecto =
             "https://firebasestorage.googleapis.com/v0/b/chatandroid6112.appspot.com" +
@@ -11,4 +8,5 @@ public class Constantes {
     public static final String nodoUsuarios = "Usuarios";
     public static final String nodoMensajes = "Mensajes";
     public static final String nodoImagenes = "Imagenes";
+    public static final String nodoFotosPerfil ="Fotos/FotoPerfil/";
 }

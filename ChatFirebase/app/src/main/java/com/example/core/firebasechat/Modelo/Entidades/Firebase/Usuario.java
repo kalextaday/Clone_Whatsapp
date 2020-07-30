@@ -1,9 +1,5 @@
 package com.example.core.firebasechat.Modelo.Entidades.Firebase;
 
-/**
- * Created by user on 19/02/2018. 19
- */
-
 public class Usuario {
 
     private String fotoPerfilURL;

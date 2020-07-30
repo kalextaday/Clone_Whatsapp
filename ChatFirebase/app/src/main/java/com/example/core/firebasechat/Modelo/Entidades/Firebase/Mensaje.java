@@ -2,10 +2,6 @@ package com.example.core.firebasechat.Modelo.Entidades.Firebase;
 
 import com.google.firebase.database.ServerValue;
 
-/**
- * Created by user on 04/09/2017. 04
- */
-
 public class Mensaje {
 
     private String mensaje;
