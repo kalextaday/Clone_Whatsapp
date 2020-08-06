@@ -21,6 +21,7 @@ import com.example.core.firebasechat.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
+<<<<<<< HEAD
 /**
  * Clase UsuarioAdaptador para heredar de la clase FirebaseRecyclerAdapter
  * @version 1.0, 30/07/2020
@@ -31,6 +32,14 @@ public class UsuarioAdaptador extends FirebaseRecyclerAdapter<Usuario,UsuarioVie
     /**
      * Metodo Contrsuctor
      * inicializa un {@link RecyclerView.Adapter} que escucha una consulta de firebase. See
+=======
+public class UsuarioAdaptador extends FirebaseRecyclerAdapter<Usuario,UsuarioViewHolder> {
+    Context c;
+    /**
+     * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
+     * {@link FirebaseRecyclerOptions} for configuration options.
+     *
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
      * @param options
      */
     public UsuarioAdaptador(@NonNull FirebaseRecyclerOptions<Usuario> options, Context c) {
@@ -38,12 +47,15 @@ public class UsuarioAdaptador extends FirebaseRecyclerAdapter<Usuario,UsuarioVie
         this.c=c;
     }
 
+<<<<<<< HEAD
     /**
      * Metodo para construir la vista del usuario
      * @param holder
      * @param position
      * @param model
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     @Override
     protected void onBindViewHolder(@NonNull UsuarioViewHolder holder, int position, @NonNull Usuario model) {
         final LUsuario lUsuario = new LUsuario(
@@ -78,12 +90,15 @@ public class UsuarioAdaptador extends FirebaseRecyclerAdapter<Usuario,UsuarioVie
         });
     }
 
+<<<<<<< HEAD
     /**
      * Metodo para Crear el componente de la vista
      * @param parent
      * @param viewType
      * @return
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     @NonNull
     @Override
     public UsuarioViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

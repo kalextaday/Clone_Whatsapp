@@ -1,10 +1,13 @@
 package com.example.core.firebasechat.Modelo.Constantes;
 
+<<<<<<< HEAD
 /**
  * Clase Constantes para manejar valores constantes
  * @version 1.0, 30/07/2020
  * @author Carrera,Taday
  */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
 public class Constantes {
     public static final String urlFotoPorDefecto =
             "https://firebasestorage.googleapis.com/v0/b/chatandroid6112.appspot.com" +

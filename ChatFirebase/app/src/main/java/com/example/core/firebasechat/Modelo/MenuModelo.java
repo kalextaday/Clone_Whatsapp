@@ -21,11 +21,14 @@ import com.google.firebase.database.ValueEventListener;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
+<<<<<<< HEAD
 /**
  * Clase MenuModelo para mostrar el menu
  * @version 1.0, 30/07/2020
  * @author Carrera,Taday
  */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
 public class MenuModelo {
     MenuPresentador menuPresentador;
 
@@ -50,28 +53,37 @@ public class MenuModelo {
                 });
     }
 
+<<<<<<< HEAD
     /**
      * Metodo para ver usuarios en la actividad
      * @param menuActivity
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public void verUsuarios(MenuActivity menuActivity){
         Intent intent = new Intent(menuActivity, ListaUsuariosActivity.class);
         menuActivity.startActivity(intent);
     }
 
+<<<<<<< HEAD
     /**
      * Metodo para cerrar la sesion
      * @param menuActivity
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public void cerrarSesion(MenuActivity menuActivity){
         FirebaseAuth.getInstance().signOut();
         returnLogin(menuActivity);
     }
 
+<<<<<<< HEAD
     /**
      * Metodo para abrir la actividad del login
      * @param menuActivity
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     private void returnLogin(MenuActivity menuActivity){
         menuActivity.startActivity(new Intent(menuActivity, InicioSesionActivity.class));
         menuActivity.finish();

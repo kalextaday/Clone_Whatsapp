@@ -29,11 +29,14 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
+<<<<<<< HEAD
 /**
  * Clase RegistroModelo para registrar usuarios
  * @version 1.0, 30/07/2020
  * @author Carrera,Taday
  */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
 public class RegistroModelo {
     RegistroPresentador registroPresentador;
 
@@ -45,12 +48,15 @@ public class RegistroModelo {
 
     private Uri fotoPerfilUri;
 
+<<<<<<< HEAD
     /**
      * Metodo Constructor
      * @param registroPresentador la clase de la capa presentador para la comunicación
      * @param registroActivity la actividad de registro
      * @param fotoPerfil el componente CircleImageView de la foto del usuario
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public RegistroModelo(RegistroPresentador registroPresentador,
                           final RegistroActivity registroActivity,
                           final CircleImageView fotoPerfil){
@@ -90,6 +96,7 @@ public class RegistroModelo {
         });
     }
 
+<<<<<<< HEAD
     /**
      * Metodo que registra el usuario en firebase
      * @param correo de tipo string del usuario
@@ -99,6 +106,8 @@ public class RegistroModelo {
      * @param mAuth la autorizacion para registrar en firebase
      * @param registroActivity la actividad de registro
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public void registrarUsuario(final String correo, String contraseña, String contraseñaRepetida,
                                  final String nombre, FirebaseAuth mAuth,
                                  final RegistroActivity registroActivity){
@@ -141,10 +150,13 @@ public class RegistroModelo {
         }
     }
 
+<<<<<<< HEAD
     /**
      * Metodo para seleccionar un foto y registrarlo para el usuario
      * @param registroActivity
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public void seleccionarFoto(RegistroActivity registroActivity){
         AlertDialog.Builder dialog = new AlertDialog.Builder(registroActivity);
         dialog.setTitle("Foto de perfil");
@@ -168,23 +180,35 @@ public class RegistroModelo {
         dialogConstruido.show();
     }
 
+<<<<<<< HEAD
     /** Envia la imagen seleccionada*/
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public void submitImagePicker(Intent data){
         imagePicker.submit(data);
     }
 
+<<<<<<< HEAD
     /** Envia la imagen de la camara seleccionada*/
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public void submitCamaraPicker(Intent data){
         cameraPicker.reinitialize(pickerPath);
         cameraPicker.submit(data);
     }
 
+<<<<<<< HEAD
     /** Almacena la imagen seleccionada*/
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public void onSaveInstanceState(Bundle outState) {
         outState.putString("picker_path", pickerPath);
     }
 
+<<<<<<< HEAD
     /** Restaura la imagen */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         pickerPath = savedInstanceState.getString("picker_path");
     }

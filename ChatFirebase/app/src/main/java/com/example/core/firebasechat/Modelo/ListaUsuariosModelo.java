@@ -11,11 +11,14 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
+<<<<<<< HEAD
 /**
  * Clase RegistroModelo para registrar usuarios
  * @version 1.0, 30/07/2020
  * @author Carrera,Taday
  */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
 public class ListaUsuariosModelo {
     ListaUsuariosPresentador listaUsuariosPresentador;
 
@@ -38,12 +41,18 @@ public class ListaUsuariosModelo {
         rvUsuarios.setAdapter(usuarioAdaptador);
     }
 
+<<<<<<< HEAD
     /*** Metodo que inicia el adaptador*/
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public void iniciarAdaptador(){
         usuarioAdaptador.startListening();
     }
 
+<<<<<<< HEAD
     /*** Metodo que detiene el adaptador*/
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public void detenerAdaptador(){
         usuarioAdaptador.stopListening();
     }

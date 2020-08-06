@@ -29,11 +29,14 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+<<<<<<< HEAD
 /**
  * Clase MensajesModelo para mostrar los mensajes
  * @version 1.0, 30/07/2020
  * @author Carrera,Taday
  */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
 public class MensajesModelo {
 
     MensajesPresentador mensajesPresentador;
@@ -44,6 +47,7 @@ public class MensajesModelo {
 
     private MensajeAdaptador mensajeAdaptador;
 
+<<<<<<< HEAD
     /**
      * Metodo constructor
      * @param mensajesPresentador para la comunicacion con el presentador
@@ -51,6 +55,8 @@ public class MensajesModelo {
      * @param mensajesActivity la actividad que muestra los mensajes
      * @param idReceptor el id del receptor del mensaje
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public MensajesModelo(MensajesPresentador mensajesPresentador, final RecyclerView rvMensajes,
                           MensajesActivity mensajesActivity, String idReceptor){
         this.mensajesPresentador = mensajesPresentador;
@@ -70,11 +76,14 @@ public class MensajesModelo {
         verifyStoragePermissions(mensajesActivity);
     }
 
+<<<<<<< HEAD
     /**
      * Metodo para enviar mensaje
      * @param txtMensaje el contenido del mensaje
      * @param idReceptor el id del receptor
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public void enviarMensaje(EditText txtMensaje, String idReceptor){
         String mensajeEnviar = txtMensaje.getText().toString();
         if(!mensajeEnviar.isEmpty()){
@@ -83,11 +92,14 @@ public class MensajesModelo {
         }
     }
 
+<<<<<<< HEAD
     /**
      * Metodo que llama la actividad que envia imagenes
      * @param mensajesActivity
      * @param EnviarFoto
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public void llamarActividadEnviarFoto(MensajesActivity mensajesActivity, int EnviarFoto){
         Intent i = new Intent(Intent.ACTION_GET_CONTENT);
         i.setType("image/jpeg");
@@ -96,11 +108,14 @@ public class MensajesModelo {
                 EnviarFoto);
     }
 
+<<<<<<< HEAD
     /**
      * Metodo para enviar imagenes
      * @param u
      * @param idReceptor
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public void enviarFoto(final Uri u, final String idReceptor){
         Date date = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(
@@ -129,20 +144,26 @@ public class MensajesModelo {
         });
     }
 
+<<<<<<< HEAD
     /**
      * Metodo para habilitar el componente setScrollBar
      * @param rvMensajes
      * @param adapter
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     private void setScrollbar(RecyclerView rvMensajes, MensajeAdaptador adapter){
         rvMensajes.scrollToPosition(adapter.getItemCount()-1);
     }
 
+<<<<<<< HEAD
     /**
      * Metodo para verificar los permisos de almacenamiento
      * @param activity
      * @return
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public boolean verifyStoragePermissions(Activity activity) {
         String[] PERMISSIONS_STORAGE = {
                 Manifest.permission.READ_EXTERNAL_STORAGE,

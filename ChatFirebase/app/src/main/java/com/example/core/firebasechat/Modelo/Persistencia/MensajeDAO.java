@@ -23,11 +23,15 @@ import com.example.core.firebasechat.Modelo.Constantes.Constantes;
 import java.util.HashMap;
 import java.util.Map;
 
+<<<<<<< HEAD
 /**
  * Clase MensajeDAO para manejar con acceso a los datos
  * @version 1.0, 30/07/2020
  * @author Carrera,Taday
  */
+=======
+
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
 public class MensajeDAO {
 
     private static MensajeDAO mensajeDAO;
@@ -40,20 +44,26 @@ public class MensajeDAO {
         return mensajeDAO;
     }
 
+<<<<<<< HEAD
     /**
      * Metodo constructor
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     private MensajeDAO(){
         database = FirebaseDatabase.getInstance();
         referenceMensajeria = database.getReference(Constantes.nodoMensajes);
     }
 
+<<<<<<< HEAD
     /**
      * Metodo para almacenar un mensaje en la bases
      * @param idEmisor del usuario que envia
      * @param idReceptor del usuario que recibe
      * @param mensaje el contenido del mensaje
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public void crearNuevoMensaje(String idEmisor, String idReceptor, Mensaje mensaje){
         if(idEmisor.equals(idReceptor)){
             DatabaseReference referenceEmisor =
@@ -70,12 +80,15 @@ public class MensajeDAO {
         }
     }
 
+<<<<<<< HEAD
     /**
      * Metodo para obtener los mensajes de la base de datos
      * @param c
      * @param adapter
      * @param KEY_RECEPTOR
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public void obtenerMensajes(final Context c, final MensajeAdaptador adapter
             , String KEY_RECEPTOR){
         FirebaseDatabase.
@@ -140,6 +153,7 @@ public class MensajeDAO {
         });
     }
 
+<<<<<<< HEAD
     /**
      * Metodo para obtener el ultimo mensaje de la base de datos
      * @param idEmisor
@@ -147,6 +161,8 @@ public class MensajeDAO {
      * @param ultimoMensaje
      * @param horaUltimoMensaje
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public void obtenerUltimoMensaje(final String idEmisor,
                                      String idReceptor,
                                      final TextView ultimoMensaje,

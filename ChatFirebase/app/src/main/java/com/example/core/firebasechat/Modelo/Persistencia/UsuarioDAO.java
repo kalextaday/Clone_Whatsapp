@@ -29,11 +29,14 @@ import com.example.core.firebasechat.Modelo.Entidades.Firebase.Usuario;
 import com.example.core.firebasechat.Modelo.Entidades.Logica.LUsuario;
 import com.example.core.firebasechat.Modelo.Constantes.Constantes;
 
+<<<<<<< HEAD
 /**
  * Clase UsuarioDAO para obtener los datos de la base de datos
  * @version 1.0, 30/07/2020
  * @author Carrera,Taday
  */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
 public class UsuarioDAO {
 
     public interface IDevolverUsuario{
@@ -56,9 +59,12 @@ public class UsuarioDAO {
         return usuarioDAO;
     }
 
+<<<<<<< HEAD
     /**
      * Metodo para obtener el usuario de la base de datos
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     private UsuarioDAO(){
         database = FirebaseDatabase.getInstance();
         storage = FirebaseStorage.getInstance();
@@ -67,18 +73,24 @@ public class UsuarioDAO {
                 getIdUsuario());
     }
 
+<<<<<<< HEAD
     /**
      * Metodo para obtener el usuario por id de la base de datos
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public String getIdUsuario(){
         return FirebaseAuth.getInstance().getCurrentUser().getUid();
     }
 
+<<<<<<< HEAD
     /**
      * Metodo para obtener la informacion de usuario por el id
      * @param id
      * @param iDevolverUsuario
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public void obtenerInformacionDeUsuarioPorId(final String id,
                                                  final IDevolverUsuario iDevolverUsuario){
         referenceUsuarios.child(id).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -97,9 +109,12 @@ public class UsuarioDAO {
 
     }
 
+<<<<<<< HEAD
     /**
      * Metodo para almacenar la direccion de la foto de usuario
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public void subirFotoUri(Uri uri, final IDevolverUrlFoto iDevolverUrlFoto){
         String nombreFoto = "";
         Date date = new Date();
@@ -126,6 +141,7 @@ public class UsuarioDAO {
         });
     }
 
+<<<<<<< HEAD
     /**
      * Metodo para registrar usuario en la base de datos
      * @param c
@@ -133,6 +149,8 @@ public class UsuarioDAO {
      * @param nombre
      * @param url
      */
+=======
+>>>>>>> 1fa891d32283ce8e20e52be6afe065f2288053aa
     public void registrarUsuario(final Context c, String correo, String nombre, String url){
         Usuario usuario = new Usuario();
         usuario.setCorreo(correo);
