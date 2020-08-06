@@ -8,7 +8,9 @@ import java.util.Locale;
 import com.example.core.firebasechat.Modelo.Entidades.Firebase.Mensaje;
 
 /**
- * Created by user on 28/08/2018. 28
+ * Clase LMensaje
+ * @version 1.0, 30/07/2020
+ * @author Carrera,Taday
  */
 public class LMensaje {
 

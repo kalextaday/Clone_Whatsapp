@@ -1,9 +1,10 @@
 package com.example.core.firebasechat.Modelo.Entidades.Firebase;
 
 /**
- * Created by user on 19/02/2018. 19
+ * Clase Usuario
+ * @version 1.0, 30/07/2020
+ * @author Carrera,Taday
  */
-
 public class Usuario {
 
     private String fotoPerfilURL;

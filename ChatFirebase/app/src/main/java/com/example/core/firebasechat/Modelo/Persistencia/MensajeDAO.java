@@ -1,4 +1,4 @@
-package com.example.core.firebasechat.Presentador.Persistencia;
+package com.example.core.firebasechat.Modelo.Persistencia;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
-import com.example.core.firebasechat.Presentador.Adaptadores.MensajeAdaptador;
+import com.example.core.firebasechat.Modelo.Adaptadores.MensajeAdaptador;
 import com.example.core.firebasechat.Modelo.Entidades.Logica.LMensaje;
 import com.example.core.firebasechat.Modelo.Entidades.Logica.LUsuario;
 import com.google.firebase.database.ChildEventListener;
@@ -23,7 +23,11 @@ import com.example.core.firebasechat.Modelo.Constantes.Constantes;
 import java.util.HashMap;
 import java.util.Map;
 
-
+/**
+ * Clase MensajeDAO para manejar con acceso a los datos
+ * @version 1.0, 30/07/2020
+ * @author Carrera,Taday
+ */
 public class MensajeDAO {
 
     private static MensajeDAO mensajeDAO;
@@ -36,11 +40,20 @@ public class MensajeDAO {
         return mensajeDAO;
     }
 
+    /**
+     * Metodo constructor
+     */
     private MensajeDAO(){
         database = FirebaseDatabase.getInstance();
         referenceMensajeria = database.getReference(Constantes.nodoMensajes);
     }
 
+    /**
+     * Metodo para almacenar un mensaje en la bases
+     * @param idEmisor del usuario que envia
+     * @param idReceptor del usuario que recibe
+     * @param mensaje el contenido del mensaje
+     */
     public void crearNuevoMensaje(String idEmisor, String idReceptor, Mensaje mensaje){
         if(idEmisor.equals(idReceptor)){
             DatabaseReference referenceEmisor =
@@ -57,6 +70,12 @@ public class MensajeDAO {
         }
     }
 
+    /**
+     * Metodo para obtener los mensajes de la base de datos
+     * @param c
+     * @param adapter
+     * @param KEY_RECEPTOR
+     */
     public void obtenerMensajes(final Context c, final MensajeAdaptador adapter
             , String KEY_RECEPTOR){
         FirebaseDatabase.
@@ -121,6 +140,13 @@ public class MensajeDAO {
         });
     }
 
+    /**
+     * Metodo para obtener el ultimo mensaje de la base de datos
+     * @param idEmisor
+     * @param idReceptor
+     * @param ultimoMensaje
+     * @param horaUltimoMensaje
+     */
     public void obtenerUltimoMensaje(final String idEmisor,
                                      String idReceptor,
                                      final TextView ultimoMensaje,

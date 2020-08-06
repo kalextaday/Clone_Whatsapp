@@ -1,7 +1,9 @@
 package com.example.core.firebasechat.Modelo.Constantes;
 
 /**
- * Created by user on 30/08/2018. 30
+ * Clase Constantes para manejar valores constantes
+ * @version 1.0, 30/07/2020
+ * @author Carrera,Taday
  */
 public class Constantes {
     public static final String urlFotoPorDefecto =
@@ -11,4 +13,5 @@ public class Constantes {
     public static final String nodoUsuarios = "Usuarios";
     public static final String nodoMensajes = "Mensajes";
     public static final String nodoImagenes = "Imagenes";
+    public static final String nodoFotosPerfil ="Fotos/FotoPerfil/";
 }

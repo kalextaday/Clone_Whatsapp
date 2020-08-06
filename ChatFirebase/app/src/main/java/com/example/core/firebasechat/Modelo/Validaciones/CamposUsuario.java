@@ -1,7 +1,12 @@
-package com.example.core.firebasechat.Presentador.Validaciones;
+package com.example.core.firebasechat.Modelo.Validaciones;
 
 import android.text.TextUtils;
 
+/**
+ * Clase CamposUsuario para validar los campos de usuario
+ * @version 1.0, 30/07/2020
+ * @author Carrera,Taday
+ */
 public class CamposUsuario {
     private static CamposUsuario camposUsuario;
 

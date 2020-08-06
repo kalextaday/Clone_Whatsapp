@@ -1,4 +1,4 @@
-package com.example.core.firebasechat.Presentador.Persistencia;
+package com.example.core.firebasechat.Modelo.Persistencia;
 
 import android.content.Context;
 import android.net.Uri;
@@ -30,7 +30,9 @@ import com.example.core.firebasechat.Modelo.Entidades.Logica.LUsuario;
 import com.example.core.firebasechat.Modelo.Constantes.Constantes;
 
 /**
- * Created by user on 28/08/2018. 28
+ * Clase UsuarioDAO para obtener los datos de la base de datos
+ * @version 1.0, 30/07/2020
+ * @author Carrera,Taday
  */
 public class UsuarioDAO {
 
@@ -54,17 +56,29 @@ public class UsuarioDAO {
         return usuarioDAO;
     }
 
+    /**
+     * Metodo para obtener el usuario de la base de datos
+     */
     private UsuarioDAO(){
         database = FirebaseDatabase.getInstance();
         storage = FirebaseStorage.getInstance();
         referenceUsuarios = database.getReference(Constantes.nodoUsuarios);
-        referenceFotoDePerfil = storage.getReference("Fotos/FotoPerfil/"+ getIdUsuario());
+        referenceFotoDePerfil = storage.getReference(Constantes.nodoFotosPerfil+
+                getIdUsuario());
     }
 
+    /**
+     * Metodo para obtener el usuario por id de la base de datos
+     */
     public String getIdUsuario(){
         return FirebaseAuth.getInstance().getCurrentUser().getUid();
     }
 
+    /**
+     * Metodo para obtener la informacion de usuario por el id
+     * @param id
+     * @param iDevolverUsuario
+     */
     public void obtenerInformacionDeUsuarioPorId(final String id,
                                                  final IDevolverUsuario iDevolverUsuario){
         referenceUsuarios.child(id).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -83,6 +97,9 @@ public class UsuarioDAO {
 
     }
 
+    /**
+     * Metodo para almacenar la direccion de la foto de usuario
+     */
     public void subirFotoUri(Uri uri, final IDevolverUrlFoto iDevolverUrlFoto){
         String nombreFoto = "";
         Date date = new Date();
@@ -109,6 +126,13 @@ public class UsuarioDAO {
         });
     }
 
+    /**
+     * Metodo para registrar usuario en la base de datos
+     * @param c
+     * @param correo
+     * @param nombre
+     * @param url
+     */
     public void registrarUsuario(final Context c, String correo, String nombre, String url){
         Usuario usuario = new Usuario();
         usuario.setCorreo(correo);

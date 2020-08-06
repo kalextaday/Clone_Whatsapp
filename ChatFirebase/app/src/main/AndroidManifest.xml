@@ -22,9 +22,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Vista.MenuActivity"></activity>
-        <activity android:name=".Vista.VerUsuariosActivity"></activity>
+        <activity android:name=".Vista.ListaUsuariosActivity"></activity>
         <activity android:name=".Vista.RegistroActivity"></activity>
-        <activity android:name=".Vista.MensajeActivity"></activity>
+        <activity android:name=".Vista.MensajesActivity"></activity>
     </application>
 
 </manifest>

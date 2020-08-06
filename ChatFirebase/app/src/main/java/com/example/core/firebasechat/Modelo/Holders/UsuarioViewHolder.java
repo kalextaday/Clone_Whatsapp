@@ -1,4 +1,4 @@
-package com.example.core.firebasechat.Presentador.Holders;
+package com.example.core.firebasechat.Modelo.Holders;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,6 +10,11 @@ import android.widget.TextView;
 import de.hdodenhof.circleimageview.CircleImageView;
 import com.example.core.firebasechat.R;
 
+/**
+ * Clase UsuarioViewHolder para manejar los componentes
+ * @version 1.0, 30/07/2020
+ * @author Carrera,Taday
+ */
 public class UsuarioViewHolder extends RecyclerView.ViewHolder {
 
     private CircleImageView civFotoPerfil;
@@ -18,6 +23,10 @@ public class UsuarioViewHolder extends RecyclerView.ViewHolder {
     private TextView txtUltimoMensaje;
     private TextView txtHoraUltimoMensaje;
 
+    /**
+     * Metodo constructor
+     * @param itemView
+     */
     public UsuarioViewHolder(@NonNull View itemView) {
         super(itemView);
         civFotoPerfil = itemView.findViewById(R.id.civFotoPerfil);

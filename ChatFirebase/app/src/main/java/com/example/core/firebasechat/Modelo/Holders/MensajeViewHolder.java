@@ -1,4 +1,4 @@
-package com.example.core.firebasechat.Presentador.Holders;
+package com.example.core.firebasechat.Modelo.Holders;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -10,9 +10,10 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import com.example.core.firebasechat.R;
 
 /**
- * Created by user on 04/09/2017. 04
+ * Clase MensajeViewHolder para manejar los componentes
+ * @version 1.0, 30/07/2020
+ * @author Carrera,Taday
  */
-
 public class MensajeViewHolder extends RecyclerView.ViewHolder {
 
     private TextView mensaje;
@@ -20,6 +21,10 @@ public class MensajeViewHolder extends RecyclerView.ViewHolder {
     private CircleImageView fotoMensajePerfil;
     private ImageView fotoMensaje;
 
+    /**
+     * Metodo contructor
+     * @param itemView
+     */
     public MensajeViewHolder(View itemView) {
         super(itemView);
         mensaje =itemView.findViewById(R.id.mensajeMensaje);
@@ -28,11 +33,18 @@ public class MensajeViewHolder extends RecyclerView.ViewHolder {
         fotoMensaje =itemView.findViewById(R.id.mensajeFoto);
     }
 
-
+    /**
+     * Metodo para regresar el mensaje al recyclerview
+     * @return TextView
+     */
     public TextView getMensaje() {
         return mensaje;
     }
 
+    /**
+     * Metodo modificar el mensaje en el recycler view
+     * @param mensaje
+     */
     public void setMensaje(TextView mensaje) {
         this.mensaje = mensaje;
     }

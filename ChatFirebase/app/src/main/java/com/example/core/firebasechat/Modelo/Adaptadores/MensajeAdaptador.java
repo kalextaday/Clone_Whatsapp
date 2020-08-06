@@ -1,4 +1,4 @@
-package com.example.core.firebasechat.Presentador.Adaptadores;
+package com.example.core.firebasechat.Modelo.Adaptadores;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -14,14 +14,15 @@ import java.util.List;
 
 import com.example.core.firebasechat.Modelo.Entidades.Logica.LMensaje;
 import com.example.core.firebasechat.Modelo.Entidades.Logica.LUsuario;
-import com.example.core.firebasechat.Presentador.Holders.MensajeViewHolder;
-import com.example.core.firebasechat.Presentador.Persistencia.UsuarioDAO;
+import com.example.core.firebasechat.Modelo.Holders.MensajeViewHolder;
+import com.example.core.firebasechat.Modelo.Persistencia.UsuarioDAO;
 import com.example.core.firebasechat.R;
 
 /**
- * Created by user on 04/09/2017. 04
+ * Clase MensajeAdaptador para heredar de la clase FirebaseRecyclerAdapter
+ * @version 1.0, 30/07/2020
+ * @author Carrera,Taday
  */
-
 public class MensajeAdaptador extends RecyclerView.Adapter<MensajeViewHolder> {
 
     private List<LMensaje> listMensaje = new ArrayList<>();
@@ -31,6 +32,11 @@ public class MensajeAdaptador extends RecyclerView.Adapter<MensajeViewHolder> {
         this.c = c;
     }
 
+    /**
+     * Metodo que añade un mensaje
+     * @param lMensaje
+     * @return
+     */
     public int añadirMensaje(LMensaje lMensaje){
         listMensaje.add(lMensaje);
         int posicion = listMensaje.size()-1;
@@ -38,11 +44,22 @@ public class MensajeAdaptador extends RecyclerView.Adapter<MensajeViewHolder> {
         return posicion;
     }
 
+    /**
+     * Metodo para actualizar un mensaje
+     * @param posicion
+     * @param lMensaje
+     */
     public void actualizarMensaje(int posicion,LMensaje lMensaje){
         listMensaje.set(posicion,lMensaje);
         notifyItemChanged(posicion);
     }
 
+    /**
+     * Metodo para crear la vista de mensaje
+     * @param parent
+     * @param viewType
+     * @return
+     */
     @Override
     public MensajeViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view;
@@ -56,6 +73,11 @@ public class MensajeAdaptador extends RecyclerView.Adapter<MensajeViewHolder> {
         return new MensajeViewHolder(view);
     }
 
+    /**
+     * Metodo para contruir el componente
+     * @param holder
+     * @param position
+     */
     @Override
     public void onBindViewHolder(MensajeViewHolder holder, int position) {
 
@@ -80,11 +102,20 @@ public class MensajeAdaptador extends RecyclerView.Adapter<MensajeViewHolder> {
         holder.getHora().setText(lMensaje.fechaDeCreacionDelMensaje());
     }
 
+    /**
+     * Metodo para obtener el numero de mensajes
+     * @return
+     */
     @Override
     public int getItemCount() {
         return listMensaje.size();
     }
 
+    /**
+     * Metodo para obtener el tipo de de vista
+     * @param position
+     * @return
+     */
     @Override
     public int getItemViewType(int position) {
         if(listMensaje.get(position).getlUsuario()!=null){

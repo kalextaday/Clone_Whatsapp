@@ -1,4 +1,4 @@
-package com.example.core.firebasechat.Presentador.Adaptadores;
+package com.example.core.firebasechat.Modelo.Adaptadores;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,22 +11,26 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.core.firebasechat.Vista.MensajeActivity;
+import com.example.core.firebasechat.Vista.MensajesActivity;
 import com.example.core.firebasechat.Modelo.Entidades.Firebase.Usuario;
 import com.example.core.firebasechat.Modelo.Entidades.Logica.LUsuario;
-import com.example.core.firebasechat.Presentador.Holders.UsuarioViewHolder;
-import com.example.core.firebasechat.Presentador.Persistencia.MensajeDAO;
-import com.example.core.firebasechat.Presentador.Persistencia.UsuarioDAO;
+import com.example.core.firebasechat.Modelo.Holders.UsuarioViewHolder;
+import com.example.core.firebasechat.Modelo.Persistencia.MensajeDAO;
+import com.example.core.firebasechat.Modelo.Persistencia.UsuarioDAO;
 import com.example.core.firebasechat.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
+/**
+ * Clase UsuarioAdaptador para heredar de la clase FirebaseRecyclerAdapter
+ * @version 1.0, 30/07/2020
+ * @author Carrera,Taday
+ */
 public class UsuarioAdaptador extends FirebaseRecyclerAdapter<Usuario,UsuarioViewHolder> {
     Context c;
     /**
-     * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
-     * {@link FirebaseRecyclerOptions} for configuration options.
-     *
+     * Metodo Contrsuctor
+     * inicializa un {@link RecyclerView.Adapter} que escucha una consulta de firebase. See
      * @param options
      */
     public UsuarioAdaptador(@NonNull FirebaseRecyclerOptions<Usuario> options, Context c) {
@@ -34,6 +38,12 @@ public class UsuarioAdaptador extends FirebaseRecyclerAdapter<Usuario,UsuarioVie
         this.c=c;
     }
 
+    /**
+     * Metodo para construir la vista del usuario
+     * @param holder
+     * @param position
+     * @param model
+     */
     @Override
     protected void onBindViewHolder(@NonNull UsuarioViewHolder holder, int position, @NonNull Usuario model) {
         final LUsuario lUsuario = new LUsuario(
@@ -57,7 +67,7 @@ public class UsuarioAdaptador extends FirebaseRecyclerAdapter<Usuario,UsuarioVie
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(c,
-                        MensajeActivity.class);
+                        MensajesActivity.class);
                 intent.putExtra("key_receptor", lUsuario.getId());
                 intent.putExtra("nombre_receptor",
                         lUsuario.getUsuario().getNombre());
@@ -68,6 +78,12 @@ public class UsuarioAdaptador extends FirebaseRecyclerAdapter<Usuario,UsuarioVie
         });
     }
 
+    /**
+     * Metodo para Crear el componente de la vista
+     * @param parent
+     * @param viewType
+     * @return
+     */
     @NonNull
     @Override
     public UsuarioViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

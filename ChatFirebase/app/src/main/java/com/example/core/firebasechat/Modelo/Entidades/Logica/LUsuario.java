@@ -1,14 +1,11 @@
 package com.example.core.firebasechat.Modelo.Entidades.Logica;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
-
 import com.example.core.firebasechat.Modelo.Entidades.Firebase.Usuario;
-import com.example.core.firebasechat.Presentador.Persistencia.UsuarioDAO;
 
 /**
- * Created by user on 28/08/2018. 28
+ * Clase LUsuario
+ * @version 1.0, 30/07/2020
+ * @author Carrera,Taday
  */
 public class LUsuario {
 
